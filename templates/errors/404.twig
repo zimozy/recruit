@@ -1,0 +1,16 @@
+{% extends 'base.twig' %}
+
+{% block title %}Not Found{% endblock %}
+
+{% block content %}
+    <div id="centerMe">
+        <p><h1 class="d-inline">404.</h1>The page you're looking for doesn't exist. We're sorry.</p>
+    </div>
+{% endblock %}
+
+{% block body_scripts %}
+<script src="{{path_for('minify')}}/js/scoopm/utils.js"></script>
+<script>
+    verticallyCenter('centerMe', -100);
+</script>
+{% endblock %}

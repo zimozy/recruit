@@ -1,0 +1,16 @@
+{% extends 'base.twig' %}
+
+{% block title %}Error{% endblock %}
+
+{% block content %}
+    <div id="centerMe">
+        <p><h1 class="d-inline">Whoops.</h1> We're sorry, there was an error.</p>
+    </div>
+{% endblock %}
+
+{% block body_scripts %}
+<script src="{{path_for('minify')}}/js/scoopm/utils.js"></script>
+<script>
+    verticallyCenter('centerMe', -100);
+</script>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.twig' %}
+
+{% block title %}Not Allowed{% endblock %}
+
+{% block content %}
+    <div id="centerMe">
+        <p><h1 class="d-inline">405.</h1> You don't have access to that URL.</p>
+    </div>
+{% endblock %}
+
+{% block body_scripts %}
+<script src="{{path_for('minify')}}/js/scoopm/utils.js"></script>
+<script>
+    verticallyCenter('centerMe', -100);
+</script>
+{% endblock %}

@@ -1,0 +1,156 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background: hsl(210, 17%, 93%);
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background: inherit;
+}
+.container { 
+    padding: 0 1.5rem;
+    max-width: 900px;
+
+    background: #ffffff;
+    box-shadow: 8px 8px 0px hsl(210, 17%, 88%);
+}
+
+.resume-info {
+    margin: 0 -1.5rem;
+    padding: 1.5rem;
+
+    color: #ffffff;
+    background: #123172;
+}
+
+.resume-info h1 {
+    margin-bottom: 1rem;
+    font-family: 'Roboto', serif;
+    font-weight: bold;
+    color: white;
+}
+
+.resume-info p {
+    margin-bottom: 1rem;
+}
+
+.resume-info h2 {
+    margin: 0;
+    font-family: 'Space Mono', serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.resume-info-company {
+    padding-right: 3rem;
+    padding-top: 0.5rem;
+    
+    border-left: 1px solid hsl(221, 50%, 70%);
+
+    font-family: 'Space Mono,', monospace;
+}
+
+/* TYPOGRAPHY */
+form h1, form h2, form h3 { color: #163d8f; }
+
+form h2 {
+    margin: 1rem 0 0.5rem 0;
+
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+
+    /* border-top: 1px solid #e3e7ee; */
+}
+
+form h3 { font-size: 1rem; }
+
+.note {
+    position: relative;
+    top: -0.7rem;
+    color: #444444;
+    font-style: italic;
+}
+
+/* FORM */
+input[type="text"]  {
+    display: block;
+    margin-bottom: 1.5rem;
+    width: 100%;
+
+    color: #163d8f;
+    border: 1px solid #163d8f;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0px;
+
+    line-height: 1.7rem;
+    padding-left: 0.5rem;
+
+    font-family: 'Space Mono', monospace;
+}
+
+/* INLINE TEXT BOX */
+input.inline {
+    display: inline !important;
+    width: auto !important;
+    border-left: inherit;
+}
+
+/* SELECT */
+.custom-select {
+    margin-bottom: 1.5rem;
+    color: #163d8f;
+    border: 1px solid #163d8f;   
+}
+
+option { color:black; }
+
+input[type="submit"]  {
+    float: right;
+    height: 2.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    color: #ffffff;
+    background-color: #163d8f;
+    border: none;
+}
+input[type="submit"]:hover { background-color: #2c53a7; }
+
+/* PLACEHOLDER COLOR */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */color:  #163d8f;}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: #163d8f; opacity: 1;}
+::-moz-placeholder { /* Mozilla Firefox 19+ */ color: #163d8f; opacity: 1;}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #163d8f;}
+::-ms-input-placeholder { /* Microsoft Edge */ color: #163d8f;}
+::placeholder { /* Most modern browsers support this now. */ color: #163d8f;}
+
+input, select {
+    /* max-width: 350px; */
+}
+
+.r-footer {
+    width: 100%;
+    position: relative;
+    bottom: -60;
+    display: block;
+    height: 60px;
+
+    /* Set the fixed height of the footer here */
+    font-size: 13px;
+    line-height: 60px;
+    /* Vertically center the text there */
+    /* background-color: #f5f5f5; */
+    color: #cccccc;
+
+    border-top: 1px solid #e3e7ee;
+}
+
