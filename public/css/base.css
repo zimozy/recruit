@@ -5,9 +5,9 @@ html {
 
 body {
     /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    margin-bottom: 70px;
+    
     background: hsl(210, 17%, 93%);
-
     font-family: 'Roboto', sans-serif;
 }
 
@@ -26,39 +26,49 @@ body {
     margin: 0 -1.5rem;
     padding: 1.5rem;
 
-    color: #ffffff;
-    background: #123172;
+    color: black;
+    background: #f7f7f7;
 }
 
 .resume-info h1 {
     margin-bottom: 1rem;
     font-family: 'Roboto', serif;
-    font-weight: bold;
-    color: white;
+    font-weight: 400;
+    /* font-weight: bold; */
+    color: black;
 }
 
 .resume-info p {
     margin-bottom: 1rem;
+    font-size: 14pt;
+    line-height: 1.5em;
 }
 
 .resume-info h2 {
     margin: 0;
-    font-family: 'Space Mono', serif;
-    font-size: 1.5rem;
-    color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: hsl(221, 10%, 55%);
 }
 
+.resume-info h3 {
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: hsl(221, 10%, 75%);
+}
 .resume-info-company {
     padding-right: 3rem;
-    padding-top: 0.5rem;
+    padding-left: 2rem;
+    padding-top: 0.4rem;
     
-    border-left: 1px solid hsl(221, 50%, 70%);
+    color: hsl(221, 10%, 70%);
+    border-left: 2px solid hsl(221, 10%, 85%);
 
-    font-family: 'Space Mono,', monospace;
+    /* font-family: 'Space Mono,', monospace; */
 }
 
 /* TYPOGRAPHY */
-form h1, form h2, form h3 { color: #163d8f; }
+/* form h1, form h2, form h3 { color: #163d8f; } */
 
 form h2 {
     margin: 1rem 0 0.5rem 0;
@@ -74,7 +84,7 @@ form h3 { font-size: 1rem; }
 .note {
     position: relative;
     top: -0.7rem;
-    color: #444444;
+    color: #333;
     font-style: italic;
 }
 
@@ -94,35 +104,41 @@ input[type="text"]  {
     line-height: 1.7rem;
     padding-left: 0.5rem;
 
-    font-family: 'Space Mono', monospace;
+    /* font-family: 'Space Mono', monospace; */
 }
 
 /* INLINE TEXT BOX */
 input.inline {
+    width: 350px;
     display: inline !important;
-    width: auto !important;
     border-left: inherit;
 }
 
 /* SELECT */
 .custom-select {
-    margin-bottom: 1.5rem;
+    margin-top: -0.4rem;
+    /* margin-bottom: 1.5rem; */
     color: #163d8f;
-    border: 1px solid #163d8f;   
+    border: 1px solid black;   
 }
 
 option { color:black; }
 
 input[type="submit"]  {
     float: right;
-    height: 2.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    height: 4rem;
+
+    margin-bottom: 1.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 
     color: #ffffff;
     background-color: #163d8f;
     border: none;
+
+    font-size: 1.2rem;
 }
+
 input[type="submit"]:hover { background-color: #2c53a7; }
 
 /* PLACEHOLDER COLOR */
@@ -133,20 +149,25 @@ input[type="submit"]:hover { background-color: #2c53a7; }
 ::-ms-input-placeholder { /* Microsoft Edge */ color: #163d8f;}
 ::placeholder { /* Most modern browsers support this now. */ color: #163d8f;}
 
-input, select {
-    /* max-width: 350px; */
+select {
+    max-width: 300px;
+}
+
+.resume-box {
+    min-height: 250px;
+    padding: 1rem;
+    border: 1px solid #163d8f;
 }
 
 .r-footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    position: relative;
-    bottom: -60;
-    display: block;
-    height: 60px;
+    height: 70px;
 
     /* Set the fixed height of the footer here */
     font-size: 13px;
-    line-height: 60px;
+    line-height: 75px; /*A little more because of the page shadow */
     /* Vertically center the text there */
     /* background-color: #f5f5f5; */
     color: #cccccc;
