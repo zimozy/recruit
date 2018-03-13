@@ -1,112 +1,158 @@
-{% extends 'base.twig' %} {% block title %}Apply{% endblock %} {% block head_styles %}
-<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Playfair+Display|Roboto:400,700|Rozha+One|Space+Mono+PT+Serif:200,300"
-    rel="stylesheet"> {% endblock %} {% block content %}
+{% extends 'base.twig' %}
 
-<div class="resume-info">
-    <div class="row">
-        <div class="col-sm">
-            <h3>Job Invitation</h3>
-            <h1>Android Software Developer</h1>
-            <p>This position is Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam placeat, aliquid perspiciatis
-                debitis enim perferendis expedita hic facere! Iure nulla, ipsa beatae accusamus eligendi illum rem provident
-                nam ipsum corporis.</p>
-            <h2>$40/hr / Charlotte, NC</h2>
-        </div>
-        <div class="col-sm-auto resume-info-company">
-            <p>IBG Software
-                <br> 333 W TRADE ST
-                <br> CHARLOTE, NC
-            </p>
-        </div>
-    </div>
-</div>
+{% block title %}Apply{% endblock %}
 
-<form method="POST" action="{{ path_for('apply', { 'applicationId' : applicationId}) }}">
+{% block head_scripts %}
+    {# FONT AWESOME #}
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+{% endblock %}
 
-    <div class="row">
-        <div class="col-sm-7">
-            <h2>About You</h2>
-            <input id="firstName" name="firstName" type="text" placeholder="First Name">
-            <input id="lastName" name="lastName" type="text" placeholder="Last Name">
-            <input id="email" name="email" type="text" placeholder="Email">
-            <input id="phone" name="phone" type="text" placeholder="Phone">
-            <input id="callTimes" name="callTimes" type="text" placeholder="When can we call you?">
-        </div>
+{% block head_styles %}
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Playfair+Display|Roboto:400,700|Rozha+One|Space+Mono+PT+Serif:200,300|Poppins:300,400,500,600,700,100,200|Open+Sans" rel="stylesheet">
+{% endblock %}
 
-        <div class="col-sm-5">
-            <h2>Resume</h2>
-            <div class="resume-box">
-                <input id="resume" name="resume" type="file">
+{% block content %}
+
+    <div class="resume-info">
+        <div class="row">
+            <div class="col-sm">
+                <h3>Job Invitation</h3>
+                <h1>Android Software Developer</h1>
+                <p>This position is lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam placeat, aliquid perspiciatis debitis enim perferendis expedita hic facere! Iure nulla, ipsa beatae accusamus eligendi illum rem provident nam ipsum corporis.</p>
+                <table>
+                    <tr>
+                        <td class="text-center p-1 pb-2 pt-0" style="line-height:2rem;">
+                            <h2>
+                                <i class="fas fa-credit-card fa-xs"></i>
+                            </h2>
+                        </td>
+                        <td class="p-1">
+                            <h2>$40/hr</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center p-1">
+                            <h2>
+                                <i class="fas fa-thumbtack fa-xs"></i>
+                            </h2>
+                        </td>
+                        <td class="p-1">
+                            <h2>Charlotte, NC</h2>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-auto resume-info-company">
+                <p>IBG Software
+                    <br>
+                    333 W TRADE ST
+                    <br>
+                    CHARLOTE, NC
+                </p>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-sm">
-            <h2>Details</h2>
-            <h3>Legal</h3>
-            <div class="form-row">
-                <div class="col-sm-3">
-                    <input id="ssn" name="ssn" type="text" placeholder="Last 4 digits of SSN"> </div>
-                <div class="col-sm-4">
-                    <select id="immigrantStatus" name="immigrantStatus" class="custom-select">
-                        <option value="0" selected="selected">Select citizenship status</option>
-                        <option value="citizen">U.S. Citizen</option>
-                        <option value="permanent">U.S. Permanent Resident (green card)</option>
-                        <option value="h1b">H-1B Visa</option>
-                    </select>
-                </div>
-            </div>
-            <h3>Job</h3>
-            <div class="form-row">
-                <div class="col-sm-3">
-                    <input id="experience" name="experience" type="text" placeholder="Years of experience">
-                </div>
-                <div class="col-sm-4">
-                    <input id="acceptedRate" name="acceptedRate" type="text" placeholder="Accepted hourly rate">
-                </div>
+    <form method="POST" action="{{ path_for('apply', { 'applicationId' : applicationId}) }}">
+
+        <div class="row">
+            <div class="col-sm-7">
+                <h2>About You</h2>
+                <input id="firstName" name="firstName" type="text" placeholder="First Name">
+                <input id="lastName" name="lastName" type="text" placeholder="Last Name">
+                <input id="email" name="email" type="text" placeholder="Email">
+                <input id="phone" name="phone" type="text" placeholder="Phone">
+                <input id="callTimes" name="callTimes" type="text" placeholder="When can we call you?">
             </div>
 
+            <div class="col-sm-5">
+                <h2>Resume</h2>
+                <div class="resume-box">
+                    <input id="resume" name="resume" type="file">
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-sm">
-            <h2>Reference</h2>
-            <span class="note">Optional</span>
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="col-sm">
-            <input id="refName" name="refName" type="text" placeholder="Name">
-        </div>
-        <div class="col-sm">
-            <input id="refEmail" name="refEmail" type="text" placeholder="Email">
-        </div>
-        <div class="col-sm">
-            <input id="refPhone" name="refPhone" type="text" placeholder="Phone">
-        </div>
-    </div>
+        <div class="row">
+            <div class="col-sm">
+                <h2>Details</h2>
+                <h3>Legal</h3>
+                <div class="form-row">
+                    <div class="col-sm-4">
+                        <input id="ssn" name="ssn" type="text" placeholder="Last 4 digits of SSN">
+                    </div>
+                    <div class="col-sm-4">
+                        <select id="immigrantStatus" name="immigrantStatus" class="custom-select">
+                            <option value="0" selected="selected">Select citizenship status</option>
+                            <option value="citizen">U.S. Citizen</option>
+                            <option value="permanent">U.S. Permanent Resident (green card)</option>
+                            <option value="h1b">H-1B Visa</option>
+                        </select>
+                    </div>
+                </div>
+                <h3>Job</h3>
+                <div class="form-row">
+                    <div class="col-sm-4">
+                        <input id="experience" name="experience" type="text" placeholder="Years of experience">
+                    </div>
+                    <div class="col-sm-4">
+                        <input id="acceptedRate" name="acceptedRate" type="text" placeholder="Accepted hourly rate">
+                    </div>
+                </div>
 
-    <div class="row">
-        <div class="col-sm">
-            <h2>Signature</h2>
-            <p>
-                I,
-                <input id="signature" name="signature" type="text" placeholder="type full name" class="inline"> agree for IBG to exclusively represent me for the
-                <b>{{position}}</b>
-                position at
-                <b>{{rate}} dollars
-                </b>
-                per hour.
-            </p>
+            </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-sm">
-            <input type="submit" value="Submit">
+        <div class="row">
+            <div class="col-sm">
+                <h2>Reference</h2>
+                <span class="note">Optional</span>
+            </div>
         </div>
-    </div>
-</form>
+        <div class="form-row">
+            <div class="col-sm">
+                <input id="refName" name="refName" type="text" placeholder="Name">
+            </div>
+            <div class="col-sm">
+                <input id="refEmail" name="refEmail" type="text" placeholder="Email">
+            </div>
+            <div class="col-sm">
+                <input id="refPhone" name="refPhone" type="text" placeholder="Phone">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <h2>Signature</h2>
+                <p>
+                    I,
+                    <input id="signature" name="signature" type="text" placeholder="type full name" class="inline">
+                    agree for IBG to exclusively represent me for the
+                    <b>{{position}}</b>
+                    position at
+                    <b>{{rate}}
+                        dollars
+                    </b>
+                    per hour.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+{% endblock %}
+
+{% block body_scripts %}
+    {# JQUERY MASK #}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
+    <script>
+        $(function () {
+            console.log('ready');
+            $('#phone').mask('(000) 000-0000');
+        });
+    </script>
 {% endblock %}

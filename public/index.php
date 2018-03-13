@@ -59,7 +59,7 @@ $container['notAllowedHandler'] = function ($c) {
 };
 
 //Minify HTML (36% reduction!)
-$app->add(new \ScoopM\Middleware\Minifier());
+// $app->add(new \ScoopM\Middleware\Minifier());
 
 //ROUTES
 require '../app/routes/main.php';
