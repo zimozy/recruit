@@ -58,8 +58,7 @@ body {
 }
 .resume-info-company {
     padding-right: 3rem;
-    padding-left: 2rem;
-    padding-top: 0.4rem;
+    padding-left: 1.5rem;
     
     color: hsl(221, 10%, 70%);
     border-left: 2px solid hsl(221, 10%, 85%);
@@ -72,19 +71,19 @@ body {
 
 form h2 {
     margin: 1rem 0 0.5rem 0;
-
+color: #163d8f;font-weight: 400;
     font-size: 1.6rem;
     line-height: 2.5rem;
 
     /* border-top: 1px solid #e3e7ee; */
 }
 
-form h3 { font-size: 1rem; }
+form h3 { font-size: 1rem; color: #163d8f;font-weight: 400;}
 
 .note {
     position: relative;
     top: -0.7rem;
-    color: #333;
+    color: #163d8f;
     font-style: italic;
 }
 
@@ -119,7 +118,7 @@ input.inline {
     margin-top: -0.4rem;
     /* margin-bottom: 1.5rem; */
     color: #163d8f;
-    border: 1px solid black;   
+    border: 1px solid #163d8f;
 }
 
 option { color:black; }

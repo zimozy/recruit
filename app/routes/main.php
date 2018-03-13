@@ -24,7 +24,7 @@ $app->group('/apply', function () {
 
     $this->get('/{applicationId}', function ($req, $res, $args) {
         $args['position'] = 'Android Developer';
-        $args['rate'] = '40';
+        $args['rate'] = '40.00';
 
         $this->view->render($res, 'apply.twig', $args);
     })->setName('apply');

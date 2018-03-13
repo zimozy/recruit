@@ -24,7 +24,7 @@
 <form method="POST" action="{{ path_for('apply', { 'applicationId' : applicationId}) }}">
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-7">
             <h2>About You</h2>
             <input id="firstName" name="firstName" type="text" placeholder="First Name">
             <input id="lastName" name="lastName" type="text" placeholder="Last Name">
@@ -33,7 +33,7 @@
             <input id="callTimes" name="callTimes" type="text" placeholder="When can we call you?">
         </div>
 
-        <div class="col-sm-5 offset-sm-1">
+        <div class="col-sm-5">
             <h2>Resume</h2>
             <div class="resume-box">
                 <input id="resume" name="resume" type="file">
@@ -52,8 +52,8 @@
                     <select id="immigrantStatus" name="immigrantStatus" class="custom-select">
                         <option value="0" selected="selected">Select citizenship status</option>
                         <option value="citizen">U.S. Citizen</option>
-                        <option value="h1b">H-1B Visa</option>
                         <option value="permanent">U.S. Permanent Resident (green card)</option>
+                        <option value="h1b">H-1B Visa</option>
                     </select>
                 </div>
             </div>
