@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-    background: inherit;
+    padding:  0.8rem 1rem;
 }
 
 .container {
